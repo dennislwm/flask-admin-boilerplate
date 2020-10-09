@@ -4,7 +4,8 @@ services:
     image: mongo
     restart: always
     environment:
-      - MONGO_INITDB_PASSWORD="asdf1234"
+      - MONGO_INITDB_ROOT_USERNAME="root"
+      - MONGO_INITDB_ROOT_PASSWORD="asdf1234"
     ports:
       - "27017:27017"
 
@@ -16,7 +17,7 @@ services:
     environment:
       - DB_USERNAME="root"
       - DB_PASSWORD="asdf1234"
-      - DB_HOST="mongodb"
+      - DB_HOST=mongodb
       - DB_PORT=27017
       - MAIL_USERNAME=""
       - MAIL_PASSWORD=""

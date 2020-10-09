@@ -8,7 +8,7 @@ ENV MAIL_USERNAME=""
 ENV MAIL_PASSWORD=""
 
 WORKDIR /app
-ADD . /app
+COPY ./ /app/
 
 RUN pip install -r requirements.txt
 
